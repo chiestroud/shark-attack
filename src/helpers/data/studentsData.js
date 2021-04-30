@@ -151,19 +151,16 @@ const students = [
   }
 ];
 
-const livingStudents = (student) => {
-  students.map(student.isDead === false);
-};
+const livingStudents = students.filter((student) => student.isDead === false);
 
-const dearlyBeloved = (student) => {
-  students.map(student.isDead === true);
-};
+const dearlyBeloved = students.filter((student) => student.isDead === true);
 
 const followTheLight = () => {
   const randomStudent = students[Math.floor(Math.random() * students.length)];
-  if (students[randomStudent].isDead === false) {
-    students[randomStudent].isDead = true;
-  }
+  randomStudent.isDead = true;
+  console.warn(randomStudent);
 };
 
-export { livingStudents, dearlyBeloved, followTheLight };
+export {
+  livingStudents, dearlyBeloved, followTheLight
+};

@@ -2,16 +2,28 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.SharkTank {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.LiveStudent {
+  width: 300px;
 }
+
+.title {
+  flex-basis: 100%;
+}
+
+//   .card {
+//     width: 300px;
+//     margin: 5px;
+//   }
+
+//   .card-body {
+//     flex: none;
+//   }
+// }
 
 .App-header {
   background-color: #282c34;
@@ -26,13 +38,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
