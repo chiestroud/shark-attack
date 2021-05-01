@@ -151,16 +151,19 @@ const students = [
   }
 ];
 
-const livingStudents = students.filter((student) => student.isDead === false);
+const livingStudents = () => students.filter((student) => student.isDead === false);
 
-const dearlyBeloved = students.filter((student) => student.isDead === true);
+const dearlyBeloved = () => students.filter((student) => student.isDead === true);
 
 const followTheLight = () => {
   const randomStudent = students[Math.floor(Math.random() * students.length)];
   randomStudent.isDead = true;
-  console.warn(randomStudent);
 };
 
 export {
   livingStudents, dearlyBeloved, followTheLight
 };
+
+// const livingStudents = students.filter((student) => student.isDead === false);
+
+// const dearlyBeloved = students.filter((student) => student.isDead === true);
