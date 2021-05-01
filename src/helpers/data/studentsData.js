@@ -2,7 +2,7 @@ const students = [
   {
     id: 1,
     firstName: 'Ben',
-    lastName: 'Jarret',
+    lastName: 'Jarrett',
     isDead: false
   },
   {
