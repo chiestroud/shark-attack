@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from 'reactstrap';
 import SharkTank from '../components/SharkTank';
 import Graveyard from '../components/Graveyard';
@@ -6,12 +6,8 @@ import { dearlyBeloved, followTheLight, livingStudents } from '../helpers/data/s
 import './App.scss';
 
 function App() {
-  const [aliveStudents, setAliveStudents] = useState([]);
-  const [deadStudents, setDeadStudents] = useState([]);
-  useEffect(() => {
-    setAliveStudents(livingStudents());
-    setDeadStudents(dearlyBeloved());
-  }, []);
+  const [aliveStudents, setAliveStudents] = useState(livingStudents());
+  const [deadStudents, setDeadStudents] = useState(dearlyBeloved());
 
   const handleClick = (e) => {
     e.preventDefault();
