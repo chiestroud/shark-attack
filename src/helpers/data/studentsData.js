@@ -156,7 +156,8 @@ const livingStudents = () => students.filter((student) => student.isDead === fal
 const dearlyBeloved = () => students.filter((student) => student.isDead === true);
 
 const followTheLight = () => {
-  const randomStudent = students[Math.floor(Math.random() * students.length)];
+  const living = livingStudents();
+  const randomStudent = living[Math.floor(Math.random() * living.length)];
   randomStudent.isDead = true;
 };
 
