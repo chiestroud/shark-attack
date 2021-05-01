@@ -1,36 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Button } from 'reactstrap';
+import SharkTank from '../components/SharkTank';
+import Graveyard from '../components/Graveyard';
+import { dearlyBeloved, followTheLight, livingStudents } from '../helpers/data/studentsData';
 import './App.scss';
 
 function App() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
+  const [aliveStudents, setAliveStudents] = useState([]);
+  const [deadStudents, setDeadStudents] = useState([]);
+  useEffect(() => {
+    setAliveStudents(livingStudents());
+    setDeadStudents(dearlyBeloved());
+  }, []);
 
   const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
+    e.preventDefault();
+    followTheLight();
+    setAliveStudents(livingStudents());
+    setDeadStudents(dearlyBeloved());
   };
 
   return (
     <div className='App'>
-      <h2>INSIDE APP COMPONENT</h2>
-      <div>
-        <button
-          id='this-button'
-          className='btn btn-info'
-          onClick={handleClick}
-        >
-          I am THIS button
-        </button>
-      </div>
-      <div>
-        <button
-          id='that-button'
-          className='btn btn-primary mt-3'
-          onClick={handleClick}
-        >
-          I am THAT button
-        </button>
-      </div>
-      <h3>{domWriting}</h3>
+      <Button className='btn' onClick={handleClick}>SHARK ATTACK</Button>
+      <SharkTank aliveStudents={aliveStudents} setAliveStudents={setAliveStudents} setDeadStudents={setDeadStudents} />
+      <Graveyard deadStudents={deadStudents}/>
     </div>
   );
 }
