@@ -163,7 +163,3 @@ const followTheLight = () => {
 export {
   livingStudents, dearlyBeloved, followTheLight
 };
-
-// const livingStudents = students.filter((student) => student.isDead === false);
-
-// const dearlyBeloved = students.filter((student) => student.isDead === true);
