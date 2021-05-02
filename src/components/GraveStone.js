@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardTitle } from 'reactstrap';
+import { Card, CardBody } from 'reactstrap';
 
 const GraveStone = ({ firstName, lastName }) => (
   <Card className="GraveStone">
-    <CardTitle tag="h5">{firstName} {lastName}</CardTitle>
+    <CardBody tag="h5">{firstName} {lastName}</CardBody>
+    <CardBody tag="h6">R.I.P.</CardBody>
+    <CardBody tag="h6">Shark Said You Were Delicious</CardBody>
   </Card>
 );
 

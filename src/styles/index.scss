@@ -1,6 +1,29 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
 
 body {
+  padding-top: 50px;
   background-color: $favColor;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+div.SharkTank {
+  background: linear-gradient(to bottom, #33ccff 0%, #0033cc 100%);
+  display: flex;
+  justify-content: center;
+}
+
+div.Graveyard {
+  background: linear-gradient(to top, #000000 0%, #993300 100%);
+  display: flex;
+  justify-content: center;
+}
+
+div.GraveStone.card {
+  height: 150px;
+  border-radius: 40% 40% 0 0;
+  margin: 1%;
+  background: linear-gradient(to top, #D3D3D3 0%, #696969 100%);
 }
