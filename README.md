@@ -10,9 +10,9 @@ https://cs-shark-attack.netlify.app/
 ### Screenshots
 <div>
   <h3>Page Load</h3>
-  <img src='./src/assets/pageload.png' width='600px'>
+  <img src='./src/assets/pageload.png' width='800px'>
   <h3>When someone gets eaten by shark</h3>
-  <img src='./src/assets/pageload.png' width='600px'>
+  <img src='./src/assets/rip.png' width='800px'>
 </div>
 
 ### Code Snippets
