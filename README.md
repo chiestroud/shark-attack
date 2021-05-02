@@ -41,5 +41,8 @@ function App() {
 ### Technologies used
 HTML/SCSS/JavaScript/React
 
+### Planning of the project
+<img src='./src/assets/planning.png' width='800px'>
+
 ### Link to Loom Video
 https://www.loom.com/share/43179314b5ce4a9d821d84bd2c5c9c96
